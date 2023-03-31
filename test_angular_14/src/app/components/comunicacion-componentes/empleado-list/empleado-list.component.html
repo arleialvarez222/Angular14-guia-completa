@@ -1,0 +1,84 @@
+<div class="rowCont">
+  <app-count-empleados [todos]="totalEmpleados()" [femenino]="totalFemenino()" [masculino]="totalMasculino()"
+    (countButtonChange)="empleadoCountChild($event)">
+  </app-count-empleados>
+  <div class="card mt-5">
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Legajo</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Sexo</th>
+            <th>Salario</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let empleado of listaEmpleados">
+            <tr *ngIf="sexoSeleccionado === 'Todos' || sexoSeleccionado === empleado.sexo ">
+              <td>{{empleado.legajo}}</td>
+              <td>{{empleado.nombre}}</td>
+              <td>{{empleado.apellido}}</td>
+              <td>{{empleado.sexo}}</td>
+              <td>{{empleado.salario | currency}}</td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- codigo sin modularizacion -->
+
+<!--
+  <div class="rowCont">
+  <div class="card">
+    <div class="card-body">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="sexo" id="todos" value="Todos"
+          [(ngModel)]="sexoSeleccionado">
+        <label class="form-check-label" for="todos">Todos({{totalEmpleados()}})</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="sexo" id="femenino" value="Femenino"
+          [(ngModel)]="sexoSeleccionado">
+        <label class="form-check-label" for="femenino">Femenino({{totalFemenino()}})</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="sexo" id="inlineRadio3" value="Masculino"
+          [(ngModel)]="sexoSeleccionado">
+        <label class="form-check-label" for="inlineRadio3">Masculino({{totalMasculino()}})</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-5">
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Legajo</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Sexo</th>
+            <th>Salario</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let empleado of listaEmpleados">
+            <tr *ngIf="sexoSeleccionado === 'Todos' || sexoSeleccionado === empleado.sexo ">
+              <td>{{empleado.legajo}}</td>
+              <td>{{empleado.nombre}}</td>
+              <td>{{empleado.apellido}}</td>
+              <td>{{empleado.sexo}}</td>
+              <td>{{empleado.salario | currency}}</td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+ -->

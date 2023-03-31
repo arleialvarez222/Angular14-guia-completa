@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/images/fondo.jpg');
+  /* background-image: url('./assets/images/fondo.jpg'); */
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  height: 100vh;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.titulo {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  text-align: center;
+  margin: 25px 0 0 0;
+}
+
+.btn-color {
+  background-color: #FF3366;
+  border-color: #FF3366;
+  border-radius: 25px;
+  width: 100%;
+}
+
+.btn-color:hover {
+  background-color: #FF3366;
+  border-color: #FF3366;
+}
+
+.rows {
+  margin: 20px 0 0 0;
+}

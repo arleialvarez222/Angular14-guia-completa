@@ -1,0 +1,8 @@
+.rowCont {
+  background: #2193b0;
+  background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 50px 100px;
+}

@@ -1,0 +1,52 @@
+.contMainCalculator {
+  background-color: #000;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.fondoItem {
+  background-color: #FF111328;
+  height: 130PX;
+  border-radius: 20PX;
+  color: white;
+}
+
+.sexo {
+  font-size: 40px;
+}
+
+.estiloText {
+  margin: 0;
+}
+
+.estiloNumero {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.cm {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: -5px;
+}
+
+.form-range {
+  padding: 0 20px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background-color: #FF3366;
+}
+
+.sumaResta {
+  cursor: pointer;
+  background-color: #FF4C4F5E;
+  padding: 7px;
+  border-radius: 15px;
+  margin-left: 3px;
+}
+
+.sexoDesactivado {
+  background-color: #7D2F2F33;
+}
