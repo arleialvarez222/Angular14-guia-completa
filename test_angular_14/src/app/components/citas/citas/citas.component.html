@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="text-center tituloClass">APLICACION DE CITAS</div>
+  <div class="row">
+    <div class="col-lg-6">
+      <app-crear-cita (nuevaCita)="agregarCita($event)"></app-crear-cita>
+    </div>
+    <div class="col-lg-6">
+      <app-list-citas [listaCitas]="listaCitas" (eliminarCit)="eliminarCitaLista($event)"></app-list-citas>
+    </div>
+  </div>
+</div>

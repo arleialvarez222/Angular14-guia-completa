@@ -40,3 +40,22 @@ body {
 .rows {
   margin: 20px 0 0 0;
 }
+
+.fontTitulo {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  text-transform: uppercase;
+}
+
+.textError {
+  font-size: 1rem;
+}
+
+.contenedorDos {
+  background-color: white;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

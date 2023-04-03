@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -18,6 +19,14 @@ import { EmpleadoListComponent } from './components/comunicacion-componentes/emp
 import { CountEmpleadosComponent } from './components/comunicacion-componentes/empleado-list/count-empleados/count-empleados.component';
 import { ListCitasComponent } from './components/citas/list-citas/list-citas.component';
 import { CrearCitaComponent } from './components/citas/crear-cita/crear-cita.component';
+import { CitasComponent } from './components/citas/citas/citas.component';
+import { GastosComponent } from './components/presupuesto/gastos/gastos.component';
+import { IngresarGastoComponent } from './components/presupuesto/gastos/ingresar-gasto/ingresar-gasto.component';
+import { IngresarPresupuestoComponent } from './components/presupuesto/ingresar-presupuesto/ingresar-presupuesto.component';
+import { ListarGastosComponent } from './components/presupuesto/gastos/listar-gastos/listar-gastos.component';
+import { DashboardComponent } from './components/clima/dashboard/dashboard.component';
+import { CortarUrlComponent } from './components/cortar-url/cortar-url.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +42,21 @@ import { CrearCitaComponent } from './components/citas/crear-cita/crear-cita.com
     EmpleadoListComponent,
     CountEmpleadosComponent,
     ListCitasComponent,
-    CrearCitaComponent
+    CrearCitaComponent,
+    CitasComponent,
+    GastosComponent,
+    IngresarGastoComponent,
+    IngresarPresupuestoComponent,
+    ListarGastosComponent,
+    DashboardComponent,
+    CortarUrlComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
