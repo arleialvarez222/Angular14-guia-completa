@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -26,7 +26,21 @@ import { IngresarPresupuestoComponent } from './components/presupuesto/ingresar-
 import { ListarGastosComponent } from './components/presupuesto/gastos/listar-gastos/listar-gastos.component';
 import { DashboardComponent } from './components/clima/dashboard/dashboard.component';
 import { CortarUrlComponent } from './components/cortar-url/cortar-url.component';
-import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { FormularioComponent } from './components/noticias/formulario/formulario.component';
+import { ListadoNoticiasComponent } from './components/noticias/listado-noticias/listado-noticias.component';
+import { NoticiasComponent } from './components/noticias/noticias.component';
+import { PixabayComponent } from './components/pixabay/pixabay.component';
+import { BuscarImageComponent } from './components/pixabay/buscar-image/buscar-image.component';
+import { ListarImagenComponent } from './components/pixabay/listar-imagen/listar-imagen.component';
+import { ErrorComponent } from './shared/error/error.component';
+import { TarjetaCreditoComponent } from './components/tarjeta-credito/tarjeta-credito.component';
+import { CrearTarjetaComponent } from './components/tarjeta-credito/crear-tarjeta/crear-tarjeta.component';
+import { ListarTarjetaComponent } from './components/tarjeta-credito/listar-tarjeta/listar-tarjeta.component';
+import { UsuariosDashboardComponent } from './components/ejemplo-rutas/usuarios-dashboard/usuarios-dashboard.component';
+import { ListaUsuariosComponent } from './components/ejemplo-rutas/lista-usuarios/lista-usuarios.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -50,13 +64,28 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     ListarGastosComponent,
     DashboardComponent,
     CortarUrlComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    FormularioComponent,
+    ListadoNoticiasComponent,
+    NoticiasComponent,
+    PixabayComponent,
+    BuscarImageComponent,
+    ListarImagenComponent,
+    ErrorComponent,
+    TarjetaCreditoComponent,
+    CrearTarjetaComponent,
+    ListarTarjetaComponent,
+    UsuariosDashboardComponent,
+    ListaUsuariosComponent,
+    FooterComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,21 @@
+.contenedor-tarjeta {
+  background: #ff0084;
+  background: -webkit-linear-gradient(to right, #33001b, #ff0084);
+  background: linear-gradient(to right, #33001b, #ff0084);
+  width: 100%;
+  min-height: 90vh;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.titulo-tarjeta {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.titulo-tarjeta h1 {
+  font-size: 40px;
+  font-family: system-ui;
+  text-transform: uppercase;
+}

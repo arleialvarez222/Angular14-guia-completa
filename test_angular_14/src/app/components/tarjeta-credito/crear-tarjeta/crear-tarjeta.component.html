@@ -1,0 +1,45 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="titulo-listar-crear-tarjeta mb-3">crear tarjeta</h5>
+
+    <form [formGroup]="form" (ngSubmit)="crearTarjeta()">
+      <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text"><i class="fas fa-user-circle"
+            [class.green-icon]="this.form.get('titular')?.valid"
+            [class.red-icon]="this.form.get('titular')?.invalid && this.form.get('titular')?.touched"></i></span>
+        <input type="text" class="form-control" placeholder="Titular" formControlName="titular" aria-label="Username"
+          aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text"><i class="fas fa-credit-card"
+            [class.green-icon]="this.form.get('numeroTarjeta')?.valid"
+            [class.red-icon]="this.form.get('numeroTarjeta')?.invalid && this.form.get('numeroTarjeta')?.touched"></i></span>
+        <input type="text" class="form-control" placeholder="Número de tarjeta" formControlName="numeroTarjeta"
+          maxlength="16">
+      </div>
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="input-group input-group-lg mb-3">
+            <span class="input-group-text"><i class="fas fa-calendar-alt"
+                [class.green-icon]="this.form.get('fechaExpiracion')?.valid"
+                [class.red-icon]="this.form.get('fechaExpiracion')?.invalid && this.form.get('fechaExpiracion')?.touched"></i></span>
+            <input type="text" class="form-control" placeholder="MM/YYYY" formControlName="fechaExpiracion"
+              maxlength="5">
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="input-group input-group-lg mb-3">
+            <span class="input-group-text"><i class="fas fa-key" [class.green-icon]="this.form.get('cvv')?.valid"
+                [class.red-icon]="this.form.get('cvv')?.invalid && this.form.get('cvv')?.touched"></i></span>
+            <input type="password" class="form-control" placeholder="cvv" formControlName="cvv" maxlength="3">
+          </div>
+        </div>
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-success btn-lg" [disabled]="form.invalid"><i
+            class="fas fa-database">&nbsp;Aceptar</i></button>
+      </div>
+    </form>
+
+  </div>
+</div>

@@ -58,4 +58,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: black;
+}
+
+.titulo-listar-crear-tarjeta {
+  margin: 0;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
 }

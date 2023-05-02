@@ -14,9 +14,17 @@ import { ConvertirMonedaComponent } from './components/convertir-moneda/converti
 import { ListaEstudiantesComponent } from './components/lista-estudiantes/lista-estudiantes.component';
 import { TareasComponent } from './components/tareas/tareas.component';
 import { CortarUrlComponent } from './components/cortar-url/cortar-url.component';
+import { NoticiasComponent } from './components/noticias/noticias.component';
+import { PixabayComponent } from './components/pixabay/pixabay.component';
+import { TarjetaCreditoComponent } from './components/tarjeta-credito/tarjeta-credito.component';
+import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
-  { path: '', component: CortarUrlComponent },
+  { path: '', component: LayoutComponent },
+  { path: 'layout', component: LayoutComponent },
+  { path: 'tarjeta-credito', component: TarjetaCreditoComponent },
+  { path: 'pixabay', component: PixabayComponent },
+  { path: 'noticias', component: NoticiasComponent },
   { path: 'cortar-url', component: CortarUrlComponent },
   { path: 'clima', component: DashboardComponent },
   { path: 'gastos', component: GastosComponent },
