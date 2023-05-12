@@ -41,6 +41,13 @@ import { UsuariosDashboardComponent } from './components/ejemplo-rutas/usuarios-
 import { ListaUsuariosComponent } from './components/ejemplo-rutas/lista-usuarios/lista-usuarios.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LayoutComponent } from './layout/layout.component';
+import { CardUsuarioComponent } from './components/ejemplo-rutas/lista-usuarios/card-usuario/card-usuario.component';
+import { UsuarioComponent } from './components/ejemplo-rutas/usuario/usuario.component';
+import { PreguntasComponent } from './components/preguntas-respuestas/preguntas/preguntas.component';
+import { DashboardPreguntasComponent } from './components/preguntas-respuestas/dashboard-preguntas/dashboard-preguntas.component';
+import { PreguntaComponent } from './components/preguntas-respuestas/pregunta/pregunta.component';
+import { RespuestaComponent } from './components/preguntas-respuestas/respuesta/respuesta.component';
+import { BotoneraComponent } from './components/preguntas-respuestas/pregunta/botonera/botonera.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +86,13 @@ import { LayoutComponent } from './layout/layout.component';
     ListaUsuariosComponent,
     FooterComponent,
     LayoutComponent,
+    CardUsuarioComponent,
+    UsuarioComponent,
+    PreguntasComponent,
+    DashboardPreguntasComponent,
+    PreguntaComponent,
+    RespuestaComponent,
+    BotoneraComponent,
   ],
   imports: [
     BrowserModule,

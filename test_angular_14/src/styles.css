@@ -69,3 +69,37 @@ body {
   text-transform: uppercase;
   font-weight: 500;
 }
+
+.btn-xl {
+  background-color: #F05F44 !important;
+  border-color: #F05F44 !important;
+  padding: 1rem 2rem;
+  border-radius: 300px;
+}
+
+.btn-xl:hover {
+  background-color: #ee4b08 !important;
+  border-color: #ee4b08 !important;
+  border-width: 3px !important;
+}
+
+.row-preguntas {
+  width: 100%;
+  min-height: 87vh;
+  background-color: #eeeeee;
+  box-sizing: border-box;
+}
+
+.badge {
+  float: right;
+}
+
+.badge.bg-body-secondary.incorrecto {
+  color: #da2d2d;
+  font-size: 18px;
+}
+
+.badge.bg-body-secondary.correcto {
+  color: #17a2b8;
+  font-size: 18px;
+}

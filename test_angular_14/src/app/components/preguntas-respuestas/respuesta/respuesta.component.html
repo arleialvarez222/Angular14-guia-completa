@@ -1,0 +1,32 @@
+<div class="row-preguntas p-5">
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">Resultado</h5>
+      <p class="card-text">Este es el resultado del cuestionario!</p>
+      <div *ngFor="let pregunta of listaPreguntas; let i = index">
+        <h4 class="card-title">{{pregunta.descipcionPregunta}}</h4>
+        <ul class="list-group">
+          <ng-container *ngFor="let respuesta of listaPreguntas[i].respuestas; let j = index">
+            <li class="list-group-item">
+              {{respuesta.nombre}}
+              <span class="badge bg-body-secondary correcto"
+                *ngIf="respuesta.esCorrecta === 1 && respuestasUsuario[i] === j">
+                <i class="fas fa-check"></i>
+              </span>
+              <span class="badge bg-body-secondary incorrecto"
+                *ngIf="respuesta.esCorrecta === 0 && respuestasUsuario[i] === j">
+                <i class="fas fa-times"></i>
+              </span>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+      <div class="row mt-3">
+        <div class="col-lg-4 offset-lg-4">
+          <button class="btn btn-info btn-lg btn-block" (click)="volver()">Volver</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

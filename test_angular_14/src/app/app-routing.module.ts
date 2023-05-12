@@ -17,11 +17,28 @@ import { CortarUrlComponent } from './components/cortar-url/cortar-url.component
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { PixabayComponent } from './components/pixabay/pixabay.component';
 import { TarjetaCreditoComponent } from './components/tarjeta-credito/tarjeta-credito.component';
+import { UsuariosDashboardComponent } from './components/ejemplo-rutas/usuarios-dashboard/usuarios-dashboard.component';
 import { LayoutComponent } from './layout/layout.component';
+import { ListaUsuariosComponent } from './components/ejemplo-rutas/lista-usuarios/lista-usuarios.component';
+import { UsuarioComponent } from './components/ejemplo-rutas/usuario/usuario.component';
+import { PreguntasComponent } from './components/preguntas-respuestas/preguntas/preguntas.component';
+import { DashboardPreguntasComponent } from './components/preguntas-respuestas/dashboard-preguntas/dashboard-preguntas.component';
+import { PreguntaComponent } from './components/preguntas-respuestas/pregunta/pregunta.component';
+import { RespuestaComponent } from './components/preguntas-respuestas/respuesta/respuesta.component';
 
 const routes: Routes = [
-  { path: '', component: LayoutComponent },
+  { path: '', redirectTo: 'preguntas', pathMatch: 'full' },
+  { path: 'dashboard-preguntas', component: DashboardPreguntasComponent },
+  { path: 'preguntas', component: PreguntasComponent },
+  { path: 'pregunta', component: PreguntaComponent },
+  { path: 'respuesta', component: RespuestaComponent },
   { path: 'layout', component: LayoutComponent },
+  {
+    path: 'dashboard-usuarios', component: UsuariosDashboardComponent, children: [
+      { path: '', component: ListaUsuariosComponent },
+      { path: 'usuario/:id', component: UsuarioComponent },
+    ]
+  },
   { path: 'tarjeta-credito', component: TarjetaCreditoComponent },
   { path: 'pixabay', component: PixabayComponent },
   { path: 'noticias', component: NoticiasComponent },
@@ -37,7 +54,7 @@ const routes: Routes = [
   { path: 'resultado/:valor', component: ResultadoComponent },
   { path: 'piano', component: PianoComponent },
   { path: 'tareas', component: TareasComponent },
-  { path: '**', redirectTo: '' },
+  { path: '**', component: PreguntasComponent },
 ];
 
 @NgModule({

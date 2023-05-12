@@ -1,0 +1,10 @@
+span {
+  margin: auto;
+  text-align: center;
+}
+
+.mat-toolbar {
+  background-color: rgb(255, 81, 0);
+  width: 100%;
+  height: 70px;
+}

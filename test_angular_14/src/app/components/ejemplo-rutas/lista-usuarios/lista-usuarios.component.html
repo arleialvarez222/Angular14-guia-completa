@@ -1,1 +1,6 @@
-<p>lista-usuarios works!</p>
+<app-spinner *ngIf="loading"></app-spinner>
+<div *ngIf="!loading" class="row">
+  <div *ngFor="let usuario of listaUsuarios" class="col-lg-3" style="margin: 30px;">
+    <app-card-usuario [usuario]="usuario"></app-card-usuario>
+  </div>
+</div>
